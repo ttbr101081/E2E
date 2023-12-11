@@ -3,7 +3,8 @@ Author: Rodrigo Terán
 Proyecto generado con Karate, Junit5, maven, java 
 
 1. Prerequisitos: 📃
-   -  IDE IntelliJ version 2023.1 
+   -  IDE IntelliJ version 2023.1
+   -  Chrome versiom 107
    -  maven version 3.8.6
    -  Java SE - JDK version 1.8.0_202
   
@@ -170,6 +171,13 @@ Proyecto generado con Karate, Junit5, maven, java
 
 * Abrir Carpeta E2E
 * Descomprimir carpeta "sites"
+
+![image](https://github.com/ttbr101081/E2E/assets/79415192/7e01543f-e16d-4749-8665-29d4068faef1)
+
+  
 * Abrir carpeta "sites" luego abrir carpeta "serenity"
 * abrir archivo "index.html"
 
+![image](https://github.com/ttbr101081/E2E/assets/79415192/9922ccce-c910-491c-9e5e-8eb98a742102)
+
+![image](https://github.com/ttbr101081/E2E/assets/79415192/598da11b-2a13-4e74-9aeb-432d34d35c89)
