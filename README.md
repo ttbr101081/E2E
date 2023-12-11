@@ -1,4 +1,4 @@
-# Ejercicio de APIS 
+# Ejercicio de E2E 
 Author: Rodrigo Terán
 Proyecto generado con Karate, Junit5, maven, java 
 
