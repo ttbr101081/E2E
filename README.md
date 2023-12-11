@@ -4,35 +4,172 @@ Proyecto generado con Karate, Junit5, maven, java
 
 1. Prerequisitos: 📃
    -  IDE IntelliJ version 2023.1 
-   -  maven version 3.9.4
-   -  Java SE - JDK version 17.0.9
+   -  maven version 3.8.6
+   -  Java SE - JDK version 1.8.0_202
+  
+   -  dependencias y versiones nesesarias
+<dependencies>
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-junit</artifactId>
+            <version>3.3.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.23.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.8.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber -->
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>3.3.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-opera-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-opera-driver</artifactId>
+            <version>4.4.0</version>
+        </dependency>
+
+    </dependencies>
+    <build>
+
+        <plugins>
+            <plugin>
+
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+
+                    <skip>
+                        true
+                    </skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.19.1</version>
+                <configuration>
+
+                    <includes>
+                        <include>
+                            **/*Runner.java
+                        </include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+
+                <groupId>net.serenity-bdd.maven.plugins</groupId>
+                <artifactId>serenity-maven-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <!--<tags>
+                        smoke
+                    </tags>-->
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.serenity-bdd</groupId>
+                        <artifactId>serenity-junit</artifactId>
+                        <version>3.3.4</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <id>serenity-reports</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>
+                                aggregate
+                            </goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
 
 2. Instrucciones para correr Automatizaciones: ✔️
    - Abrir IntelliJ
-   - Abrir proyecto "EjercicodeAPIS"
-   - 
+   - Abrir proyecto "E2E"
   
    **** EJECUTAR ****
 
-   - Abrir carpeta "src" 
-   - Abrir carpeta "test"
-   - Abrir carpeta "java"
+   - Abrir terminal
+   - Escribir el siguiete comando "mvn clean verify"
+     
    
-   
-   * click derecho en "KarateRunner"
-   * click en "Run KarateRunner"
-    
-![Captura de pantalla 2023-12-09 235432](https://github.com/ttbr101081/EjerciciodeAPIS/assets/79415192/c5626199-01e5-4791-ae83-6bdea6d51dc5)
+   ![image](https://github.com/ttbr101081/E2E/assets/79415192/7d64de8c-b6bf-4cc8-b5ba-ca96fc2b3af3)
 
-**** VER LOS INFORMES ****
+  
+
+**** VER LOS INFORMES GENERADOS AL CORRER ****
+
 * Abrir Carpeta "target"
-* Abrir Carpeta "karate-reports"
-* click en "karate-summary.html"
+* Abrir Carpeta "sites"
+* Abrir Carpeta "serenity"
 
-![image](https://github.com/ttbr101081/EjerciciodeAPIS/assets/79415192/ae863be3-aefe-406f-9ea0-8b7e74409065)
+![image](https://github.com/ttbr101081/E2E/assets/79415192/6da48c29-9f05-4fd3-b4ea-864e0457b8a4)
 
+  
+* click en index.html"
+* click derecho opcion "open in" opcion "Browser"
+* Elegimos browser
 
-Al abrir podremos observar los diferentes escenarios con sus respectivas ejecuciones y respuestas por cada API solicitada obtenido desde https://petstore.swagger.io/ 
+ ![image](https://github.com/ttbr101081/E2E/assets/79415192/f806181f-2942-4399-96bf-6b1941e9850f)
 
-![image](https://github.com/ttbr101081/EjerciciodeAPIS/assets/79415192/f146d4e6-8fef-4cdd-abb3-086062e950e1)
+**** VER LOS INFORMES SUBIDOS ****
+
+* Abrir Carpeta E2E
+* Descomprimir carpeta "sites"
+* Abrir carpeta "sites" luego abrir carpeta "serenity"
+* abrir archivo "index.html"
 
