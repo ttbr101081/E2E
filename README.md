@@ -1,6 +1,6 @@
 # Ejercicio de E2E 
 Author: Rodrigo Terán
-Proyecto generado con Karate, Junit5, maven, java 
+Proyecto generado con serenity, Junit5, maven, java, selenium 
 
 1. Prerequisitos: 📃
    -  IDE IntelliJ version 2023.1
