@@ -1,7 +1,9 @@
 # Ejercicio de E2E opcion3
+Author: Rodrigo Terán
+
 ![image](https://github.com/ttbr101081/E2E/assets/79415192/83d3ec01-4a33-4eac-9b4c-eab9bc3fadd1)
 
-Author: Rodrigo Terán
+
 Proyecto generado con serenity, Junit5, maven, java, selenium 
 
 1. Prerequisitos: 📃
